@@ -1,0 +1,812 @@
+
+/* Google Font CDN Link */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+  
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* Custom Scroll Bar CSS */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+
+::-webkit-scrollbar-thumb {
+  /* background: #6e93f7; */
+  background: #23cf5d;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  /* background: #4070f4; */
+  background: #23cf5d;
+}
+
+div.scroll-button a {
+  background: #23cf5d;
+  color: #0E2431;
+}
+
+/* navbar styling */
+
+nav {
+  position: fixed;
+  width: 100%;
+  height: 10%;
+  padding: 5px 0;
+  z-index: 998;
+  /* transition: all 0.3s ease; */
+  font-family: 'Ubuntu', sans-serif;
+}
+
+nav.sticky {
+  /* background: #4070f4; */
+  background: #23cf5d;
+  padding: 2px 0;
+}
+
+nav .navbar {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+}
+
+nav .navbar .logo a {
+  font-weight: 500;
+  font-size: 35px;
+  color: #0E2431;
+}
+
+nav.sticky .navbar .logo a {
+  color: #ffffff;
+}
+
+nav.sticky .navbar .logo a:hover {
+  color: #0E2431;
+}
+
+.navbar .logo a:hover {
+  color: #23cf5d;
+}
+
+nav .navbar .menu {
+  display: flex;
+  position: relative;
+}
+
+nav .navbar .menu li {
+  list-style:none;
+  margin: 0 15px;
+}
+
+.navbar .menu a {
+  font-size: 19px;
+  font-weight: 500;
+  color: #0E2431;
+  padding: 6px 0;
+  transition: all 0.4s ease;
+}
+
+.navbar .menu a:hover {
+ 
+  color: #23cf5d;
+}
+
+nav.sticky .menu a {
+  color: #FFF;
+}
+
+nav.sticky .menu a:hover {
+  color: #0E2431;
+}
+
+.navbar .media-icons a {
+  color: #0E2431;
+  font-size: 18px;
+  margin: 0 6px;
+}
+
+.navbar .media-icons a:hover {
+  color: #23cf5d;
+}
+
+nav.sticky .media-icons a:hover {
+  color: #0E2431;
+}
+
+nav.sticky .media-icons a {
+  color: #FFF;
+}
+
+
+    /* LOGIN BUTTON CSS START  */
+
+    /* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 8px 10px;
+  margin: 6px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+.btns {
+  background-color: #23cf5d;
+  color: white;
+  font-weight: bold;
+  letter-spacing: 2px;
+  padding: 4px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.btns:hover {
+  opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #0E2431;
+  border-radius: 8px;
+  color: #FFF;
+}
+
+.cancelbtn:hover{
+  background-color: #23cf5d;
+}
+
+.container {
+  padding: 10px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 15px;
+}
+
+/* The Modal (background) */
+
+div.modal {
+  display: none; 
+  position: fixed;
+  z-index: 1; 
+  left: 970px;
+  top: 25px;
+  width: 25%; 
+  height: 80%; 
+  overflow: auto; 
+  background: transparent;
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+
+div.modal-content {
+  margin: 5% auto 15% auto; 
+  border: 1px solid #888;
+  height: 70%;  
+  width: 25%;   
+} 
+
+/* The Close Button (x) */
+
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+
+
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+
+/* LOGIN BUTTON CSS END  */
+
+
+/* Side Navigation Menu Button CSS */
+
+.navbar .menu .cancel-btn {
+  position: absolute;
+  color: #fff;
+  right: 30px;
+  top: 20px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: none;
+}
+
+.menu-btn {
+  position: absolute;
+  top: 18px; /* Adjust as needed */
+  left: 10px; /* Adjust as needed */
+  cursor: pointer;
+  color:#0E2431;
+}
+
+nav .menu-btn:hover {
+  color: #23cf5d;
+  
+}
+
+nav.sticky .menu-btn:hover {
+  color: #0E2431;
+}
+
+.navbar .menu .menu-btn {
+  color: #0E2431;
+}
+
+
+/* home section styling */
+
+.home {
+  height: 100vh;
+  width: 100%;
+  padding: 15px;
+  background-image: url(./Images/white\ copy.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: local;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+section .bg-image {
+  height: 400px;
+  width: 400px;
+  position: absolute;
+  top: 120px;
+  right: 60px;
+
+}
+
+.bg-image img {
+  height: 400px;
+  width: 400px;
+  border-radius: 50%;
+  border: 8px solid #0E2431;
+}
+
+.home .home-content {
+  width: 90%;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.home .text-one {
+  font-size: 25px;
+  color: #0E2431;
+}
+
+.home .text-two {
+  color: #0E2431;
+  font-size: 75px;
+  font-weight: 600;
+  margin-left: -3px;
+}
+
+.home .text-three {
+  font-size: 40px;
+  margin: 5px 0;
+  color: #23cf5d;
+}
+
+.home .text-four {
+  font-size: 23px;
+  margin: 5px 0;
+  color: #0E2431;
+}
+
+.home .button {
+  margin: 14px 0;
+}
+
+.home .button button {
+  outline: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 25px;
+  font-weight: 400;
+  background: #23cf5d;
+  color: #fff;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: all 0.4s ease;
+}
+
+.home .button button:hover {
+  border-color: #23cf5d;
+  background-color: #fff;
+  color: #23cf5d;
+}
+
+.division {
+  width: 100vw;
+  height: 5px;
+  background-color: #0E2431;
+}
+
+/* About Section Styling */
+
+/* Those Elements Where We Have Apply Same CSS,
+ I'm Selecting Directly 'Section Tag' and 'Class'  */
+
+section {
+  padding-top: 40px;
+}
+
+section .content {
+  width: 80%;
+  margin: 40px auto;
+  font-family: 'Poppins', sans-serif;
+}
+
+.about .about-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+section .title {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+section .title span {
+  color: #0E2431;
+  font-size: 30px;
+  font-weight: 600;
+  position: relative;
+  padding-bottom: 8px;
+}
+
+section .title span::before,
+section .title span::after {
+  content: '';
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: #23cf5d;
+  left: 0;
+  bottom: 0;
+}
+
+section .title span::after {
+  bottom: -7px;
+  width: 70%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.about .about-details .left {
+  width: 45%;
+}
+
+.about .left img {
+  height: 80%;
+  width: 55%;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 3px solid #23cf5d ;
+}
+
+.about-details .right {
+  width: 55%;
+}
+section .topic {
+  color: #0E2431;
+  font-size: 25px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.about-details .right p {
+  text-align: justify;
+  color: #0E2431;
+}
+
+section .button {
+  margin: 16px 0;
+}
+
+section .button button {
+  outline: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 25px;
+  font-weight: 400;
+  background: #23cf5d;
+  color: #fff;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+section .button button:hover {
+  border-color: #23cf5d;
+  background-color: #fff;
+  color: #23cf5d;
+}
+
+/* My Skills CSS */
+
+.skills {
+  background: #F0F8FF;
+}
+
+.skills .content {
+  padding: 40px 0;
+}
+
+.skills .skills-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.skills-details .text {
+  width: 50%;
+}
+
+.skills-details p {
+  color: #0E2431;
+  text-align: justify;
+}
+
+.skills .skills-details .experience {
+  display: flex;
+  align-items: center;
+  margin: 0 10px;
+}
+
+.skills-details .experience .num {
+  color: #0E2431;
+  font-size: 80px;
+}
+
+.skills-details .experience .exp {
+  color: #0E2431;
+  margin-left: 20px;
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0 6px;
+}
+
+.skills-details .boxes {
+  width: 45%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.skills-details .box {
+  width: calc(100% / 2 - 20px);
+  margin: 20px 0;
+}
+
+.skills-details .boxes .topic {
+  font-size: 20px;
+  color: #23cf5d;
+}
+
+.skills-details .boxes .per {
+  font-size: 60px;
+  color: #23cf5d;
+}
+
+/* My Services CSS */
+
+.services .boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.services .boxes .box {
+  margin: 20px 0;
+  width: calc(100% / 3 - 20px);
+  text-align: center;
+  border-radius: 12px;
+  padding: 30px 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12);
+  cursor: default;
+  transition: all 0.4s ease;
+}
+
+.services .boxes .box:hover {
+  background: #23cf5d;
+  color: #fff;
+}
+
+.services .boxes .box .icon {
+  height: 50px;
+  width: 50px;
+  background: #23cf5d;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 50px;
+  font-size: 18px;
+  color: #fff;
+  margin: 0 auto 10px auto;
+  transition: all 0.4s ease;
+}
+
+.boxes .box:hover .icon {
+  background-color: #fff;
+  color: #23cf5d;
+}
+
+.services .boxes .box:hover .topic,
+.services .boxes .box:hover p {
+  color: #0E2431;
+  transition: all 0.4s ease;
+}
+
+.services .boxes .box:hover .topic,
+.services .boxes .box:hover p {
+  color: #fff;
+}
+
+/* Contact Me CSS */
+
+.contact {
+  background: #F0F8FF;
+}
+
+.contact .content {
+  margin: 0 auto;
+  padding: 30px 0;
+}
+
+.contact .text {
+  width: 80%;
+  text-align: center;
+  margin: auto;
+}
+
+/* Footer CSS */
+
+footer {
+  background: #23cf5d;
+  padding: 15px 0;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+footer .text span {
+  font-size: 17px;
+  font-weight: 400;
+  color: #fff;
+}
+
+footer .text span a {
+  font-weight: 500;
+  color: #FFF;
+}
+
+footer .text span a:hover {
+  text-decoration: underline;
+}
+
+/* Scroll TO Top Button CSS */
+
+.scroll-button a {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  color: #fff;
+  background: #23cf5d;
+  padding: 7px 12px;
+  font-size: 18px;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.15);
+  display: none;
+}
+
+/* Responsive Media Query */
+
+@media (max-width: 1190px) {
+  section .content {
+    width: 85%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .about .about-details {
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .about .about-details .left {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .about-details .right {
+    width: 90%;
+    margin: 40px 0;
+  }
+
+  .services .boxes .box {
+    margin: 20px 0;
+    width: calc(100% / 2 - 20px);
+  }
+}
+
+@media (max-width: 900px) {
+  .about .left img {
+    height: 350px;
+    width: 350px;
+  }
+}
+
+@media (max-width: 750px) {
+  nav .navbar {
+    width: 90%;
+  }
+
+  nav .navbar .menu {
+    position: fixed;
+    left: -100%;
+    top: 0;
+    background: #0E2431;
+    height: 100vh;
+    max-width: 400px;
+    width: 100%;
+    padding-top: 60px;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.5s ease;
+  }
+
+  .navbar.active .menu {
+    left: 0;
+  }
+
+  nav .navbar .menu a {
+    font-size: 23px;
+    display: block;
+    color: #fff;
+    margin: 10px 0;
+  }
+
+  nav.sticky .menu a:hover {
+    color: #23cf5d;
+  }
+
+  nav .navbar .media-icons {
+    display: none;
+  }
+
+  nav .menu-btn,
+  .navbar .menu .cancel-btn {
+    display: block;
+  }
+
+  .home .text-two {
+    font-size: 65px;
+  }
+
+  .home .text-three {
+    font-size: 35px;
+  }
+
+  .skills .skills-details {
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .skills-details .text {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+
+  .skills-details .boxes {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .services .boxes .box {
+    margin: 20px 0;
+    width: 100%;
+  }
+
+  .contact .text {
+    width: 100%;
+  }
+}
+
+@media (max-width: 500px) {
+  .home .text-two {
+    font-size: 55px;
+  }
+
+  .home .text-three {
+    font-size: 33px;
+  }
+
+  .skills-details .boxes .per {
+    font-size: 50px;
+    color: #23cf5d;
+    
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .bg-image {
+    height: 200px;
+    width: 200px;
+  }
+
+  .bg-image img {
+    height: 200px;
+    width: 200px;
+  }
+}
